@@ -11,7 +11,7 @@ import "./index.css";
 import App from "./components/App";
 
 
-const composeEnhancers = window.__REDUX_DEVTOOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnhancers = (typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
 const store = createStore(reducerIndex, composeEnhancers(applyMiddleware(thunk, logger)))
 
 

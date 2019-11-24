@@ -25,7 +25,9 @@ export const fetchSmurfs = () => dispatch => {
 export const createSmurf = ({name,age,height}) => dispatch => {
 
     dispatch({ type: CREATE_SMURF_START })
+
 console.log(name,age,height)
+
     axios
         .post(`http://localhost:3334/smurfs`,{name,age,height})
         .then(response => dispatch({ type: CREATE_SMURF_SUCCESS, payload: response.data }))
@@ -47,5 +49,5 @@ export const deleteSmurf = (id) => dispatch => {
     axios
         .delete(`http://localhost:3334/smurfs/${id}`)
         .then(response => dispatch({ type: DELETE_SMURF_SUCCESS, payload: response.data }))
-        .catch(er => dispatch({ type: DELETE_SMURF_ERR, payload: er }))
+        .catch(er => dispatch({ type: DELETE_SMURF_ERR, payload: er.data.error }))
 }

@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import {updateSmurf,deleteSmurf} from "../actions"
 
  const Smurf = (props) => {
-    console.log(props)
+    
     const{name,age,height,id}=props.smurf;
     return (
         <>
