@@ -1,14 +1,24 @@
 .App {
   text-align: center;
-  border:1px red solid;
-  margin:1rem;
+  border: 1px red solid;
+  margin: 1rem;
   box-shadow: .12px .12px 1.36px 1px;
-  background-image:"../images/olliesmruf.jpg";
 }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
+}
+
+.backgroundImage {
+  display: block;
+  position: absolute;
+  opacity: 0.2;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  background-image: url(/static/media/olliesmruf.ffe6a114.jpg);
+  z-index: -1;
 }
 
 .App-header {
@@ -27,30 +37,85 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.smurfCardContainer{
+.smurfCardContainer {
   min-width: 100px;
-    max-width: 300px;
-    border: solid brown 2px;
-    border-radius: 4px;
-    box-shadow: 0.36px 0.72px 2.3px 0.9px, 0.12px 0.36px 3px 0.9px;
-    margin: 1rem;
-}
-.smurfCardContainer h4{
-  min-width: 100px;
-    max-width: 300px;
-    border: solid brown 2px;
-    border-radius: 4px;
-    box-shadow: 0.36px 0.72px 2.3px 0.9px, 0.12px 0.36px 3px 0.9px;
-    margin: 1rem;
+  max-width: 300px;
+  border: solid brown 2px;
+  border-radius: 4px;
+  box-shadow: 0.36px 0.72px 2.3px 0.9px, 0.12px 0.36px 3px 0.9px;
+  margin: 1rem;
 }
 
-button{
+.smurfCardContainer h4 {
+  min-width: 100px;
+  max-width: 300px;
+  border: solid brown 2px;
+  border-radius: 4px;
+  box-shadow: 0.36px 0.72px 2.3px 0.9px, 0.12px 0.36px 3px 0.9px;
+  margin: 1rem;
+}
+
+button {
+  -webkit-appearance: button;
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  color: buttontext;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: center;
+  align-items: flex-start;
+  cursor: default;
+  background-color: buttonface;
+  box-sizing: border-box;
+  margin: 0em;
+  font: 400 13.3333px Arial;
+  padding: 1px 6px;
+  border-width: 2px;
+  border-style: outset;
+  border-color: buttonface;
+  border-image: initial;
+}
+
+button {
   border-radius: 4px;
   box-shadow: 0.36px 0.72px 2.3px 0.9px, 0.12px 0.36px 3px 0.9px;
   margin: 1rem;
 
+
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: lightgoldenrodyellow;
+  text-shadow: 0.36px 0.24px 0.6px black, 0.48px 0.36px 0.2px black;
+  border-radius: 3px;
+  box-shadow: 0.24px 0.36px 0.24px 1px dimgray, 0.12px 0.18px 0.24px 1px dimgray;
+background-color:rebeccapurple;
+
+}
+
+a:active {
+  background: rebeccapurple;
+  color: black;
+  text-shadow: 0.24px 0.12px 0.3px lightgoldenrodyellow, 0.48px 0.36px 0.2px lightgoldenrodyellow;
+  border-radius: 3px;
+  box-shadow: 0.24px 0.36px 0.24px 1px dimgrey, 0.12px 0.18px 0.24px 1px dimgrey;
+
+ 
 }
