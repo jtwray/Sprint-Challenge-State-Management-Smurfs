@@ -23,10 +23,29 @@ In this challenge, you are to build a Smurfs village utilizing context or Redux 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] What problem does the context API help solve?
+
+Context API attempts to provide a lighter weight but still thorough solution than say FLUX or REDUX in regards to providing an app wide state management system for organizing software development. 
+Allows one to insert state and data "horizontally" injecting it in the necessary componenets without ahving to prop drill through seemingly endless intermediate components that have no use for the state other than being a passthrough or highway to get it to the final destination.
 - [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+actions describe what changed will happen to state  reducers are wehere the business logic of the state management comes in. In the reducers this is where the state isnt mutated but is copied and changed in an immutable fashion.
+
+the store is the "single source of truth" for state managemment. The store is literally a javascript object with keyvalue pairs representing the name and current state of all application wide data.
+
+
 - [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other?
+
+
+Application is state that is used in more than one component in many circumstances/ where as component state is only relevant to the component it is created in and jsut wouldnt make since or have a use in another component. example for component state would be the localized state variables created when taking user input through a form.  sving the event target value to a seemingly temporary constant in the component before reassigning an application wide state key value to that of the temporary constant. The event targetvalue of  a particular input on a form will have no meaning in another component.   
 - [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+
+redux thunk allows us to use asynchronous actions to update state. using thunks we reshape our action creators to call a ()=>"next"=> type currylike function with a dispatch call.  We reshape the action creators to define the finite states of our various api calls for instance, there would be : a loading action dispatched just before our api call is made followed by a success action or an error action  dispatched as soon as the api responds successfully or with an error respectively. 
+
 - [ ] What is your favorite state management system you've learned and this sprint? Please explain why!
+
+it previous endeavours and adventures attempting to take on Redux i was nearly sick to my stomach with all the boilerplate and difficulty i had trying to wire redux into an application. I came to find out to my surprise and delight that as my javascript fundamentals fell into place and i began to become a more confident and experienced developer Redux actually felt incredibly intuitive logical organized and helpful. Designing a redux application requires forethought and planning for the various " states " /statuses that your uses may encounter and this seems like a natural second step to wire framing for me.  Wire frame and sketch out squares for each component list out what states props values or data each one will need to manipulate pass store or display, draw out arrows between them to dignate heirarchy and flow. The actions can be pulled from a jotting down a list of what each component will do to interact with data or props. THe reducers can be derived from these actions as the simpolest logic you can compile immutably to reach the desired outcome of said actions. Your Store is direved from the list of data and props you create from each component's box of props or data. This is a process I have incorporated into my application development planning and it has helped me rid my development of spaghetti code and lost time.
+
+Honestly though... I like context and reducers just as much  in different ways and look forward to playing around with different ways of combining all three to reach what i need. 
 
 ## Project Set Up
 
