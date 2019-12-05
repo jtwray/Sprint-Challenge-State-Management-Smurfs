@@ -40,7 +40,7 @@ const reducerIndex = (state = initialState, action) => {
             return { ...state, isLoading: true, }
         }
         case DELETE_SMURF_SUCCESS: {
-            return { ...state, isLoading: false, smurfs: [...state.smurfs, action.payload] }
+            return { ...state, isLoading: false, smurfs: [...state.smurfs.filter(smurf=>smurf.id!==action.payload) ] }
         }
         case DELETE_SMURF_ERR: {
             return { ...state, error: action.payload, isLoading: false, }
